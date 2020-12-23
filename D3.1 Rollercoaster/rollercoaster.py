@@ -8,9 +8,9 @@ def photograph():
         print("Photographs are $3.")
         global total_bill
         total_bill += 3
-        print(f"The total_bill is {total_bill}")
+        print(f"The total bill is ${total_bill}.")
     elif question == "NO":
-        print(f"The total_bill is {total_bill}")
+        print(f"The total bill is ${total_bill}.")
     else: 
         print("Please respond with Yes or No")
         photograph()
