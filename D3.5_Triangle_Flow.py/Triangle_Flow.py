@@ -1,7 +1,7 @@
 # BJJ Triangle Flow 
 
 def triangle_part1():
-    response = input("Can you do a triangle? ").upper()
+    response = str(input("Can you do a triangle? ")).upper()
     if response == "NO":
         print("Get back to training!")
     elif response == "YES":
@@ -12,7 +12,7 @@ def triangle_part1():
         triangle_part1()
 
 def triangle_part2():
-    response = input("Able to do flying triangles? ").upper()
+    response = str(input("Able to do flying triangles? ")).upper()
     if response == "NO":
         print("Get back to training!")
     elif response == "YES":
