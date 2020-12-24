@@ -1,1 +1,1 @@
-Roller Coaster - Code Logic Practice
+Roller Coaster - Code Logic and Exception Handling Practice
