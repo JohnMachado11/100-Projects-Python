@@ -36,7 +36,7 @@ def age_check():
             total_bill += 12
             photograph(total_bill)
         else: 
-            print("\nDue to your midlife crisis your ticket is free!\n")
+            print("\nEverything is going to be ok. Have a free ride on us!\n")
             photograph(total_bill)
 
 def photograph(total_bill):
