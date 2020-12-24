@@ -6,7 +6,7 @@ def height_check():
     try:
         height = int(input("What is your height in cm? "))
     except:
-        print("\nPlease respond with a whole number. ie: 134\n")
+        print("\nPlease respond with a whole number. E.g. 134\n")
         height_check()
     else:
         if height >= 120:
@@ -19,7 +19,7 @@ def age_check():
     try: 
         age = int(input("What is your age? "))
     except:
-        print("\nPlease respond with a whole number. ie: 25\n")
+        print("\nPlease respond with a whole number. E.g. 25\n")
         age_check()
     else:
         total_bill = 0
