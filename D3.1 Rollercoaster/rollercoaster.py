@@ -1,34 +1,54 @@
-print("Welcome to the rollercoaster!")
-height = int(input("What is your height in cm? "))
-total_bill = 0
+print("=============================")
+print("WELCOME TO THE ROLLERCOASTER!")
+print("=============================")
 
-def photograph():
+def height_check():
+    try:
+        height = int(input("What is your height in cm? "))
+    except:
+        print("\nPlease respond with a whole number in cm. ie: 134\n")
+        height_check()
+    else:
+        if height >= 120:
+            print("\nYou can ride the rollercoaster.\n")
+            age_check()
+        elif height < 120: 
+            print("\nSorry you have to grow taller.\n")
+
+def age_check():
+    try: 
+        age = int(input("What is your age? "))
+    except:
+        print("\nPlease respond with a whole number. ie: 25\n")
+        age_check()
+    else:
+        total_bill = 0
+        if age < 12:
+            print("\nChild tickets are $5.\n")
+            total_bill += 5
+            photograph(total_bill)
+        elif age < 18:
+            print("\nYouth tickets are $7.\n")
+            total_bill += 7
+            photograph(total_bill)
+        elif age < 45 or age > 55:
+            print("\nAdult tickets are $12.\n")
+            total_bill += 12
+            photograph(total_bill)
+        else: 
+            print("\nDue to your midlife crisis your ticket is free!\n")
+            photograph(total_bill)
+
+def photograph(total_bill):
     question = str(input("Want photos? ")).upper()
     if question == "YES":
-        print("Photographs are $3.")
-        global total_bill
         total_bill += 3
-        print(f"The total bill is ${total_bill}.")
+        print("\nPhotographs are $3.\n")
+        print(f"\nThe total bill is ${total_bill}.\n")
     elif question == "NO":
-        print(f"The total bill is ${total_bill}.")
+        print(f"\nThe total bill is ${total_bill}.\n")
     else: 
-        print("Please respond with Yes or No")
-        photograph()
+        print("\nPlease respond with Yes or No\n")
+        photograph(total_bill)
 
-if height > 120:
-    print("You can ride the rollercoaster.")
-    age = int(input("What is your age? "))
-    if age < 12:
-        print("Child tickets are $5.")
-        total_bill += 5
-        photograph()
-    elif age <= 18:
-        print("Youth tickets are $7.")
-        total_bill += 7
-        photograph()
-    else:
-        print("Adult tickets are $12.")
-        total_bill += 12
-        photograph()
-else: 
-    print("Sorry you have to grow taller.")
+height_check()
