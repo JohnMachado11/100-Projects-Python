@@ -6,7 +6,7 @@ def height_check():
     try:
         height = int(input("What is your height in cm? "))
     except:
-        print("\nPlease respond with a whole number in cm. ie: 134\n")
+        print("\nPlease respond with a whole number. ie: 134\n")
         height_check()
     else:
         if height >= 120:
