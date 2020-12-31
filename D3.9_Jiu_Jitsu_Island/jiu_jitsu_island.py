@@ -46,41 +46,41 @@ def cross_roads():
         cross_roads()
 
 def boss_fight():
-        try:
-            fight_question = int(input('''
-            How do you attack? Please select and input a number:
-            1.Flying Armbar 
-            2.Mounted Armbar 
-            3.Armbar from Guard 
-            4.Inverted Armbar \n'''))
-        except ValueError:
+    try:
+        fight_question = int(input('''
+        How do you attack? Please select and input a number:
+        1.Flying Armbar 
+        2.Mounted Armbar 
+        3.Armbar from Guard 
+        4.Inverted Armbar \n'''))
+    except ValueError:
+        print("Please input only 1, 2, 3 or 4")
+        boss_fight()
+    else:
+        if fight_question == 1:
+            print("\nAs you attempt a flying armbar the boss smacks you midair and you land on your head. You are dead.")
+        elif fight_question == 2:
+            print("\nYou try a single leg and its successful. The boss falls to the ground")
+            print("You pass his guard and get full mount. You attempt a mounted armbar")
+            print("Your attempt fails and the boss ends up on top. He ground and pounds you into dust. You are dead.")
+        elif fight_question == 4: 
+            print("\nAs you attempt an inverted armbar from standing you fall on your neck and die.")
+        elif fight_question == 3:
+            print("\nYou do a guard pull from standing and you fall the the ground with the boss in your guard. The boss begins to throw strikes at you.")
+            print("You cover up as several huge strikes are coming at you.")
+            print("As the boss overextends on a punch you reach for it and you attempt an armbar from guard.")
+            print("Its succesful! The boss screams in agony as he is forced to tap. You let go.")
+            print("....")
+            print("....")
+            print("'You have defeated me...' the boss says.")
+            print("The boss hands you keys to the Jiu-Jitsu Island Academy.\n")
+            print("\nYOU\n")
+            print("\nARE\n")
+            print("\nNOW\n")
+            print("\nTHE\n")
+            print("\nBOSS\n")
+        else:
             print("Please input only 1, 2, 3 or 4")
             boss_fight()
-        else:
-            if fight_question == 1:
-                print("\nAs you attempt a flying armbar the boss smacks you midair and you land on your head. You are dead.")
-            elif fight_question == 2:
-                print("\nYou try a single leg and its successful. The boss falls to the ground")
-                print("You pass his guard and get full mount. You attempt a mounted armbar")
-                print("Your attempt fails and the boss ends up on top. He ground and pounds you into dust. You are dead.")
-            elif fight_question == 4: 
-                print("\nAs you attempt an inverted armbar from standing you fall on your neck and die.")
-            elif fight_question == 3:
-                print("\nYou do a guard pull from standing and you fall the the ground with the boss in your guard. The boss begins to throw strikes at you.")
-                print("You cover up as several huge strikes are coming at you.")
-                print("As the boss overextends on a punch you reach for it and you attempt an armbar from guard.")
-                print("Its succesful! The boss screams in agony as he is forced to tap. You let go.")
-                print("....")
-                print("....")
-                print("'You have defeated me...' the boss says.")
-                print("The boss hands you keys to the Jiu-Jitsu Island Academy.\n")
-                print("\nYOU\n")
-                print("\nARE\n")
-                print("\nNOW\n")
-                print("\nTHE\n")
-                print("\nBOSS\n")
-            else:
-                print("Please input only 1, 2, 3 or 4")
-                boss_fight()
 
 belt_check()
