@@ -1,54 +1,29 @@
-import sys
-
 def map_creation():
-    print()
-    row1 = ["⬜️","⬜️","⬜️"]
-    row2 = ["⬜️","⬜️","⬜️"]
-    row3 = ["⬜️","⬜️","⬜️"]
-    print("       Col 1  Col 2  Col 3")
+    row1 = ["O","O","O"]
+    row2 = ["O","O","O"]
+    row3 = ["O","O","O"]
     map = [row1, row2, row3]
-    print(f" Row 1 {map[0]}\n Row 2 {map[1]}\n Row 3 {map[2]}")
-    map_designation(map)
+    print("\n       Col1 Col2 Col3")
+    print(f" Row1 {map[0]}\n Row2 {map[1]}\n Row3 {map[2]}")
+    print("\nWhere do you want to put the treasure?\n")
+    map_input(map)
 
-def map_designation(map):
+def map_input(map):
     try:
-        position = int(input(" Where do you want to put the treasure? Type in a 2 digit number from 1-3. Indicate ROW then COLUMN. E.g. 12, 33, etc. "))
+        row = 0
+        column = 0
+        while row not in range(1,4):
+            row = int(input("Which ROW?. Select 1, 2 or 3: "))
+            print(f"You selected Row #{row}.\n")
+        while column not in range(1,4):
+            column = int(input("Which COLUMN? Select 1, 2 or 3: "))
+            print(f"You selected Column #{column}.\n")
     except ValueError:
-        print('''\n
-            Please only respond with a 2 digit number from 1-3. 
-            E.g. 12, 33, etc.
-            ''')
+        print("\nERROR: Please only respond with 1, 2 or 3.\n")
         map_creation()
     else:
-        if position == 11:
-            map[0][0] = "X"
-        elif position == 12:
-            map[0][1] = "X"
-        elif position == 13:
-            map[0][2] = "X"
-        elif position == 21:
-            map[1][0] = "X"
-        elif position == 22:
-            map[1][1] = "X"
-        elif position == 23:
-            map[1][2] = "X"
-        elif position == 31:
-            map[2][0] = "X"
-        elif position == 32:
-            map[2][1] = "X"
-        elif position == 33:
-            map[2][2] = "X"
-        else:
-            print('''\n
-                Please only respond with a 2 digit number from 1-3. 
-                E.g. 12, 33, etc.
-                \n''')
-            map_creation()
-    map_layout(map)
-
-def map_layout(map):
-    print()
-    print(f"{map[0]}\n{map[1]}\n{map[2]}")
-    sys.exit()
+        map[row - 1][column - 1] = "X"
+        print(f"You selected Row #{row} and Column #{column}\n")
+        print(f"{map[0]}\n{map[1]}\n{map[2]}")
 
 map_creation()
