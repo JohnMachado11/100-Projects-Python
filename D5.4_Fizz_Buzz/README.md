@@ -4,6 +4,6 @@ If a number is divisible by 3, print "Fizz".
 
 If a number is divisible by 5, print "Buzz".
 
-If a number is divisible by 3 and 5 (or 15), print "FizzBuzz".
+If a number is divisible by 3 AND 5 (or just 15), print "FizzBuzz".
 
 Else just print a number.
