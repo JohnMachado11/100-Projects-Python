@@ -13,7 +13,7 @@ def start():
     text_and_shift_input(direction)
 
 def text_and_shift_input(direction):
-    text = input("Type your word:\n")
+    text = input("Type your word:\n").lower()
     Flag = True
     while Flag:
         try:
