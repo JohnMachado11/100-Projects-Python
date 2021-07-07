@@ -1,7 +1,6 @@
 from tkinter import *
 import requests
 
-
 # ---------- API Call -------------- #
 def get_quote():
     response = requests.get(url="https://zenquotes.io/api/random") 
@@ -30,9 +29,3 @@ click_button.grid(pady=10, row=1, column=0)
 
 window.mainloop()
 # -------------------------------------- #
-
-
-
-
-
-
