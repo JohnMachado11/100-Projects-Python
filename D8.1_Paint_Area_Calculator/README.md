@@ -1,1 +1,0 @@
-A paint area calculator. 
