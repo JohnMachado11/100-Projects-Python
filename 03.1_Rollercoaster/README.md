@@ -1,1 +1,1 @@
-A program primarily designed to validate a persons height (in cm) and age to see if they meet a minimum requirement to be able to go on a rollercoaster. 
+A program designed to validate a persons height (in cm) and age to see if they meet a minimum requirement to be able to go on a rollercoaster. Bonus, if its all in the clear, program checks if a person wants a picture taken while they are on the ride as well. 
