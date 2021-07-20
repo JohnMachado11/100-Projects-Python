@@ -1,6 +1,6 @@
 # AVERAGE HEIGHT OF ALL STUDENTS
 
-# Example input = 67, 82, 51, 31, 21
+# Example input = 67 82 51 31 21
 student_heights = input("Input a list of student heights ").split()
 for n in range(0, len(student_heights)):
     student_heights[n] = int(student_heights[n])
